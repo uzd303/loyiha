@@ -1,0 +1,499 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 247, 255);
+
+}
+
+
+/* tepa */
+
+.tepa {
+    background-color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.tepa h2 {
+    color: rgb(22, 118, 184);
+    font-size: 30px;
+}
+
+.tepa span {
+    color: rgb(32, 185, 139);
+}
+
+.menyu {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.menyu button {
+    background: none;
+    border: none;
+    color: rgb(23, 105, 170);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menyu button:hover {
+    color: rgb(32, 185, 139);
+}
+
+
+#rejim {
+    background-color: rgb(23, 105, 170);
+    color: white;
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+
+
+.sahifa {
+    display: none;
+    padding: 60px 7%;
+}
+
+#bosh {
+    display: block;
+}
+
+.qator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 80px;
+    background-color: white;
+    padding: 40px;
+    min-height: 420px;
+    border-radius: 20px;
+}
+
+.teskari {
+    flex-direction: row-reverse;
+}
+
+.matn {
+    width: 50%;
+}
+
+.matn h4 {
+    color: rgb(32, 185, 139);
+    margin-bottom: 20px;
+}
+
+.matn h1 {
+    color: rgb(23, 105, 170);
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.matn h2 {
+    color: rgb(23, 105, 170);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.matn p {
+    color: rgb(85, 85, 85);
+    font-size: 19px;
+    line-height: 2;
+}
+
+.matn button {
+    background-color: rgb(32, 185, 139);
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.rasm img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
+.sahifa>h1 {
+    color: rgb(23, 105, 170);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.izoh {
+    text-align: center;
+    color: rgb(102, 102, 102);
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.past {
+    background-color: rgb(23, 105, 170);
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+
+.past h2 {
+    margin-bottom: 15px;
+}
+.past p {
+    margin-top: 10px;
+}
+
+
+
+body.tungi {
+    background-color: rgb(16, 24, 39);
+}
+
+body.tungi .tepa {
+    background-color: rgb(30, 41, 59);
+}
+body.tungi .tepa h2 {
+    color: white;
+}
+
+body.tungi .menyu button {
+    color: white;
+}
+
+body.tungi .menyu #rejim {
+    background-color: rgb(32, 185, 139);
+    color: white;
+}
+
+body.tungi .qator {
+    background-color: rgb(30, 41, 59);
+}
+
+body.tungi .matn h1 {
+    color: rgb(96, 165, 250);
+}
+
+body.tungi .matn h2 {
+    color: rgb(96, 165, 250);
+}
+
+body.tungi .matn p {
+    color: rgb(209, 213, 219);
+}
+
+body.tungi .sahifa > h1 {
+    color: rgb(96, 165, 250);
+}
+
+body.tungi .izoh {
+    color: rgb(209, 213, 219);
+}
+
+body.tungi .past {
+    background-color: rgb(11, 18, 32);
+}
+
+
+/* Katta rasmlar */
+
+.katta-blok {
+    position: relative;
+    height: 500px;
+    margin-bottom: 80px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: white;
+
+    opacity: 0;
+    transform: scale(0.85);
+    filter: blur(8px);
+
+    transition: all 1.5s ease;
+}
+
+.katta-blok.show {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+.katta-blok img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.katta-yozuv {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    max-width: 550px;
+    color: white;
+}
+
+.katta-yozuv h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.katta-yozuv p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.katta-yozuv button {
+    background-color: rgb(32, 185, 139);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.ikkinchi-blok {
+    height: 450px;
+}
+
+/* Tungi rejim */
+
+body.tungi .katta-blok {
+    background-color: rgb(30, 41, 59);
+}
+
+/* animatsiyasi */
+
+
+/* Qatorlar animatsiyasi */
+
+.qator {
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+.qator.chap {
+    transform: translateX(-150px);
+}
+
+.qator.ong {
+    transform: translateX(150px);
+}
+
+.qator.korindi {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Katta rasmlar animatsiyasi */
+
+.katta-blok {
+    opacity: 0;
+    transform: scale(0.85);
+    filter: blur(8px);
+    transition: all 1.5s ease;
+}
+
+.katta-blok.korindi {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+.katta-blok img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+/* TELEFON VA PLANShet UCHUN */
+
+@media (max-width: 768px) {
+
+    /* Yuqori menyu */
+
+    .tepa {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+
+    .tepa h2 {
+        font-size: 26px;
+    }
+
+    .menyu {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .menyu button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+
+    /* Sahifalar */
+
+    .sahifa {
+        padding: 30px 15px;
+    }
+
+
+    /* Katta qatorlar */
+
+    .qator {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+        min-height: auto;
+        margin-bottom: 35px;
+    }
+
+    .teskari {
+        flex-direction: column;
+    }
+
+    .matn {
+        width: 100%;
+    }
+
+    .matn h1 {
+        font-size: 29px;
+    }
+
+    .matn h2 {
+        font-size: 26px;
+    }
+
+    .matn p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+
+    /* Oddiy rasmlar */
+
+    .rasm {
+        width: 100%;
+    }
+
+    .rasm img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+
+    /* Sahifa sarlavhalari */
+
+    .sahifa > h1 {
+        font-size: 28px;
+    }
+
+    .izoh {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* Katta rasmlar */
+
+    .katta-blok {
+        height: 350px;
+        margin-bottom: 35px;
+    }
+
+    .ikkinchi-blok {
+        height: 350px;
+    }
+
+    .katta-yozuv {
+        left: 20px;
+        right: 20px;
+        max-width: 100%;
+    }
+
+    .katta-yozuv h1 {
+        font-size: 27px;
+    }
+
+    .katta-yozuv p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .katta-yozuv button {
+        padding: 12px 18px;
+    }
+
+
+    /* Animatsiya */
+
+    .qator.chap {
+        transform: translateX(-60px);
+    }
+
+    .qator.ong {
+        transform: translateX(60px);
+    }
+
+
+    /* Pastki qism */
+
+    .past {
+        padding: 25px 15px;
+    }
+
+}
+
+
+/* JUDA KICHIK TELEFONLAR */
+
+@media (max-width: 400px) {
+
+    .menyu button {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    .matn h1 {
+        font-size: 25px;
+    }
+
+    .matn h2 {
+        font-size: 23px;
+    }
+
+    .katta-yozuv h1 {
+        font-size: 23px;
+    }
+
+    .katta-blok {
+        height: 300px;
+    }
+
+}
